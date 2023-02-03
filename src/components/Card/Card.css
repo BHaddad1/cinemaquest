@@ -3,16 +3,12 @@
   border-radius: 15px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   height: 45vh;
-  margin-bottom: 2%;
   margin-top: 2%;
-  width: 20vw;
+  width: 18vw;
 }
 
 .movie-image {
   border-radius: 5px;
   height: 40vh;
-  margin-bottom: 15%;
-  margin-left: 8%;
-  margin-top: 8%;
   width: 15vw;
 }
