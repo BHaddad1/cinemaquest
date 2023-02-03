@@ -1,0 +1,13 @@
+.movies-container {
+  align-content: space-between;
+  align-items: flex-start;
+  border: 2px solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 113vh;
+  justify-content: space-around;
+  margin-left: 3%;
+  overflow: scroll;
+  width: 93vw;
+}
