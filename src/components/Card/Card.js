@@ -5,7 +5,7 @@ const Card = ({ id, image}) => {
 
     return (
         <div className="movie-card">
-					<img src={image}/> 
+					<img src={image} alt='movie poster'/> 
         </div>
     )
 

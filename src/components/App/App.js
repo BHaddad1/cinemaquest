@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import Movies from '../Movies/Movies';
-import movieData from '../../../data/movieData';
+import movieData from '../../data/movieData';
+import SingleMovie from '../SingleMovie/SingleMovie';
 
 class App extends Component {
  constructor() {
@@ -10,11 +11,12 @@ class App extends Component {
   this.state = {
     allMovies: [],
     singleMovieId: 0,
+    singleMovie: {},
   }
  }
 
  componentDidMount = () => {
-  this.setState({allMovies: movieData})
+  this.setState({allMovies: movieData.movies})
  }
 
  render() {
@@ -24,7 +26,9 @@ class App extends Component {
       <Movies 
         movies={this.state.allMovies}
       />
-      <SingleMovie />
+      <SingleMovie
+       
+      />
     </div>
   )
  }
