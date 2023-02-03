@@ -5,12 +5,12 @@
 }
 
 .logo {
-  margin-left: 15%;
+  margin-left: 13%;
 }
 
 .title {
   color: white;
-  font-size: 50px;
+  font-size: 60px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 6%;
@@ -22,6 +22,11 @@
   margin-top: 7%;
 }
 
+.search-field::placeholder {
+  font-size: 18px;
+  text-align: center;
+}
+
 .button {
   background-color: #C70039;
   border: none;
@@ -30,8 +35,9 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   height: 5.5vh;
   margin-top: 7.2%;
+  text-align: center;
   width: 5vw;
 }
