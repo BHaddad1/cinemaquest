@@ -1,0 +1,13 @@
+.movie-card {
+  border: 2px solid;
+  border-radius: 15px;
+  height: 45vh;
+  margin-top: 2%;
+  width: 18vw;
+}
+
+.movie-image {
+  border-radius: 5px;
+  height: 40vh;
+  width: 15vw;
+}
