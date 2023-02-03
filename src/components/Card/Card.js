@@ -1,7 +1,7 @@
 import React from "react";
 import './Card.css';
 
-const Card = ({ id, image}) => {
+const Card = ({ id, image, findSingleMovie }) => {
  
  return (
     <div className="movie-card">
@@ -9,6 +9,7 @@ const Card = ({ id, image}) => {
         className="movie-image" 
         src={image} 
         alt='movie poster'
+        onClick={() => findSingleMovie(id)}
       /> 
     </div>
   )

@@ -2,7 +2,7 @@ import React from "react";
 import './Movies.css';
 import Card from "../Card/Card";
 
-const Movies = ({ movies }) => {
+const Movies = ({ movies, findSingleMovie }) => {
 	
 	const movieCards = movies.map((movie) => {
 		return (
@@ -10,6 +10,7 @@ const Movies = ({ movies }) => {
 				key={movie.id}
 				id={movie.id}
 				image={movie['poster_path']}
+				findSingleMovie={findSingleMovie}
 			/>
 		)
 	})
