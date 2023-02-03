@@ -21,17 +21,18 @@ class Form extends Component {
 
     render() {
 			return (
-				<header>
-					<img src={icon} alt="Happy popcorn bucket"/> 
-					<h1>CinemaQuest</h1>
+				<header className="nav">
+					<img className="logo" src={icon} alt="Happy popcorn bucket"/> 
+					<h1 className="title">CinemaQuest</h1>
 					<input 
 						type='text'
 						placeholder="Movie Title"
 						value={this.state.title}
 						name="title"
 						onChange={(event) => this.handleChange(event)}
+						className="search-field"
 					/>
-					<button onClick={this.handleClick}>Search</button>
+					<button className="button" onClick={this.handleClick}>Search</button>
 				</header>    
         )
 			}
