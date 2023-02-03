@@ -1,10 +1,11 @@
 import React from "react";
 import './SingleMovie.css'; 
 
-const SingleMovie = ({ image, title, releaseDate, overview, rating, genre, budget, revenue, runtime, tagline }) => {
+const SingleMovie = ({ image, title, releaseDate, overview, rating, genre, budget, revenue, runtime, tagline, handleBackButton }) => {
   
 	return (
 		<section className="single-movie">
+			<button onClick={handleBackButton}>Go Back Home</button>
 			<div className="poster">
 				<img src={image} alt="movie poster"/> 
 			</div>
