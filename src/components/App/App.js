@@ -11,32 +11,43 @@ class App extends Component {
   this.state = {
     allMovies: [],
     singleMovieId: 0,
-    singleMovie: {},
+    singleMovie: "",
+    error: "",
+    isLoading: false,
   }
  }
 
  componentDidMount = () => {
+  // all movie fetching
   this.setState({allMovies: movieData.movies})
  }
 
- findSingleMovie = (id) => {
+ handleCardClick = id => {
   const foundMovie = this.state.allMovies.find(movie => movie.id === id);
+  // single movie fetch
+  console.log(foundMovie)
   this.setState({singleMovie: foundMovie, singleMovieId: foundMovie.id});
+ }
+
+ handleBackButton = () => {
+  this.setState({singleMovie: "", singleMovieId: 0})
  }
 
  render() {
   return (
     <div>
       <Form />
+      {this.state.allMovies && !this.state.singleMovieId && !this.state.singleMovie &&
       <Movies 
         movies={this.state.allMovies}
-        findSingleMovie={this.findSingleMovie}
-      />
+        handleCardClick={this.handleCardClick}
+      />}
       <SingleMovie
         image={this.state.singleMovie['poster_path']}
         title={this.state.singleMovie.title}
         releaseDate={this.state.singleMovie['release_date']}
         rating={this.state.singleMovie['average_rating']}
+        handleBackButton={this.handleBackButton}
       />
     </div>
   )
