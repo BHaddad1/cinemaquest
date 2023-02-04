@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import Movies from '../Movies/Movies';
-import movieData from '../../data/movieData';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import getData from '../../apiCalls/api';
 
