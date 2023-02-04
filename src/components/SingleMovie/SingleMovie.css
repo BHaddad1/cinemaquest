@@ -1,4 +1,38 @@
+.single-movie-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.single-movie {
+  display: flex;
+  flex-direction: row;
+}
+
 .poster {
-  height: 20vh;
-  width: 15vw;
+  border-radius: 10px;
+  height: 65vh;
+  margin-left: 15%;
+  width: 25vw;
+}
+
+.movie-info {
+  color: white;
+  margin-left: 15%;
+}
+
+.back-button {
+  background-color: #C70039;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: 18px;
+  height: 5.5vh;
+  margin-bottom: 5%;;
+  margin-left: 4%;
+  margin-top: 5%;
+  text-align: center;
+  width: 10vw;
 }
