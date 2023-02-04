@@ -18,7 +18,7 @@ class App extends Component {
  }
 
  componentDidMount = () => {
-  getData("movies")
+  getData("movie")
     .then(data => {
       this.setState({allMovies: data.movies, isLoading: false})
     })
@@ -41,8 +41,8 @@ class App extends Component {
   return (
     <div>
       <Form />
-      {this.state.isLoading && <h2 className="loading">Loading...</h2>}
-      {this.state.error && <h2 className="error">`${this.state.error}`</h2>}
+      {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
+      {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
       {this.state.allMovies && !this.state.singleMovieId && !this.state.singleMovie &&
       <Movies 
         movies={this.state.allMovies}
