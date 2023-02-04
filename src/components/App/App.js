@@ -29,10 +29,9 @@ class App extends Component {
  handleCardClick = id => {
   const foundMovie = this.state.allMovies.find(movie => movie.id === id);
   getData(`movies/${foundMovie.id}`)
-    .then(data => {this.setState({singleMovie: data.movie, singleMovieId: data.movie.id})
-  console.log(data.movie)})
+    .then(data => this.setState({singleMovie: data.movie, singleMovieId: data.movie.id}))
     .catch(error => this.setState({error: error.message}))
-    console.log()
+
  }
 
  handleBackButton = () => {
