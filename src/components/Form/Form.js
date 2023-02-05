@@ -24,17 +24,19 @@ class Form extends Component {
       <header className="nav">
         <img className="logo" src={icon} alt="Happy popcorn bucket" />
         <h1 className="title">CinemaQuest</h1>
-        <input
-          type="text"
-          placeholder="Movie Title"
-          value={this.state.title}
-          name="title"
-          onChange={(event) => this.handleChange(event)}
-          className="search-field"
-        />
-        <button className="button" onClick={this.handleClick}>
-          Search
-        </button>
+        <div className="search-wrapper"> 
+          <input
+            type="text"
+            placeholder="Movie Title"
+            value={this.state.title}
+            name="title"
+            onChange={(event) => this.handleChange(event)}
+            className="search-field"
+           />
+          <button className="button" onClick={this.handleClick}>
+            Search
+          </button>
+        </div>
       </header>
     );
   }

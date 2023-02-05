@@ -19,15 +19,15 @@ const SingleMovie = ({ singleMovie, handleBackButton }) => {
 					/> 
 				</div>
 				<div className="movie-info">
-					<h2>{singleMovie.title}</h2>
-					<h3>{singleMovie.tagline}</h3>
-					<h3>Released:  {singleMovie["release_date"].replaceAll("-", "/")}</h3>
-					<h3>Average Rating:  {singleMovie["average_rating"]}</h3>
-					<h3>Genres:  {singleMovie.genres.join(", ")}</h3>
-					<p>Overview:  {singleMovie.overview}</p>
-					<p>Budget:  ${singleMovie.budget.toLocaleString("en-US")}</p>
-					<p>Total Revenue:  ${singleMovie.revenue.toLocaleString("en-US")}</p>
-					<p>Total Runtime:  <span>{time[0]} hours</span>  <span>{minutes} minutes</span></p>
+					<h2 className="movie-title">{singleMovie.title}</h2>
+					<h3>Tagline: <span className="info">{singleMovie.tagline}</span> </h3>
+					<h3>Released: <span className="info">{singleMovie["release_date"].replaceAll("-", "/")} </span> </h3>
+					<h3>Average Rating: <span className="info">{singleMovie["average_rating"]}</span> </h3>
+					<h3>Genres: <span className="info">{singleMovie.genres.join(", ")} </span> </h3>
+					<h3>Overview: <span className="info">{singleMovie.overview} </span> </h3>
+					<h3>Budget: <span className="info">${singleMovie.budget.toLocaleString("en-US")} </span> </h3>
+					<h3>Total Revenue: <span className="info"> ${singleMovie.revenue.toLocaleString("en-US")} </span> </h3>
+					<h3>Total Runtime: <span className="info"> <span> {time[0]} hours</span> <span>{minutes} minutes</span> </span> </h3>
 				</div>
 			</section>
 		</section>
