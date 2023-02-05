@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import Movies from '../Movies/Movies';
-import movieData from '../../data/movieData';
 import SingleMovie from '../SingleMovie/SingleMovie';
+import getData from '../../apiCalls/api';
 
 class App extends Component {
  constructor() {
@@ -11,33 +11,49 @@ class App extends Component {
   this.state = {
     allMovies: [],
     singleMovieId: 0,
-    singleMovie: {},
+    singleMovie: "",
+    error: "",
+    isLoading: true,
   }
  }
 
  componentDidMount = () => {
-  this.setState({allMovies: movieData.movies})
+  
+  getData("movies")
+    .then(data => {
+      this.setState({allMovies: data.movies, isLoading: false})
+    })
+    .catch(error => {this.setState({error: error.message})})
  }
 
- findSingleMovie = (id) => {
+ handleCardClick = id => {
   const foundMovie = this.state.allMovies.find(movie => movie.id === id);
-  this.setState({singleMovie: foundMovie, singleMovieId: foundMovie.id});
+  getData(`movies/${foundMovie.id}`)
+    .then(data => this.setState({singleMovie: data.movie, singleMovieId: data.movie.id}))
+    .catch(error => this.setState({error: error.message}))
+
+ }
+
+ handleBackButton = () => {
+  this.setState({singleMovie: "", singleMovieId: 0})
  }
 
  render() {
   return (
     <div>
       <Form />
+      {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
+      {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
+      {this.state.allMovies && !this.state.singleMovieId && !this.state.singleMovie &&
       <Movies 
         movies={this.state.allMovies}
-        findSingleMovie={this.findSingleMovie}
-      />
+        handleCardClick={this.handleCardClick}
+      />}
+      {this.state.singleMovie && this.state.singleMovieId && 
       <SingleMovie
-        image={this.state.singleMovie['poster_path']}
-        title={this.state.singleMovie.title}
-        releaseDate={this.state.singleMovie['release_date']}
-        rating={this.state.singleMovie['average_rating']}
-      />
+        singleMovie={this.state.singleMovie}
+        handleBackButton={this.handleBackButton}
+      />}
     </div>
   )
  }

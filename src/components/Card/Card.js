@@ -1,19 +1,18 @@
 import React from "react";
-import './Card.css';
+import "./Card.css";
 
-const Card = ({ id, image, findSingleMovie }) => {
- 
- return (
-    <div className="movie-card">
-	  <img 
-        className="movie-image" 
-        src={image} 
-        alt='movie poster'
-        onClick={() => findSingleMovie(id)}
-      /> 
-    </div>
-  )
+const Card = ({ id, image, handleCardClick }) => {
   
-}
+  return (
+    <div className="movie-card">
+      <img
+        className="movie-image"
+        src={image}
+        alt="movie poster"
+        onClick={() => handleCardClick(id)}
+      />
+    </div>
+  );
+};
 
-export default Card; 
+export default Card;

@@ -1,0 +1,47 @@
+.single-movie-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.single-movie {
+  display: flex;
+  flex-direction: row;
+}
+
+.poster {
+  border-radius: 10px;
+  height: 65vh;
+  margin-left: 15%;
+  width: 27vw;
+}
+
+.movie-info {
+  color: white;
+  margin-left: 15%;
+}
+
+.back-button {
+  background-color: #C70039;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  height: 5.5vh;
+  margin-bottom: 5%;
+  margin-left: 4%;
+  margin-top: 5%;
+  text-align: center;
+  width: 10vw;
+}
+h3{
+  font-size:large;
+  color: yellow; 
+}
+.info {
+  color: white; 
+}
+.movie-title {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
