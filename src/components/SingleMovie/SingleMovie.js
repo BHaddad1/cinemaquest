@@ -24,10 +24,10 @@ const SingleMovie = ({ singleMovie, handleBackButton }) => {
 					<h3>Released: <span className="info">{singleMovie["release_date"].replaceAll("-", "/")} </span> </h3>
 					<h3>Average Rating: <span className="info">{singleMovie["average_rating"]}</span> </h3>
 					<h3>Genres: <span className="info">{singleMovie.genres.join(", ")} </span> </h3>
-					<h3>Overview: <span className="info">{singleMovie.overview} </span> </h3>
-					<h3>Budget: <span className="info">${singleMovie.budget.toLocaleString("en-US")} </span> </h3>
-					<h3>Total Revenue: <span className="info"> ${singleMovie.revenue.toLocaleString("en-US")} </span> </h3>
-					<h3>Total Runtime: <span className="info"> <span> {time[0]} hours</span> <span>{minutes} minutes</span> </span> </h3>
+					<p>Overview: <span className="info">{singleMovie.overview} </span> </p>
+					<p>Budget: <span className="info">${singleMovie.budget.toLocaleString("en-US")} </span> </p>
+					<p>Total Revenue: <span className="info"> ${singleMovie.revenue.toLocaleString("en-US")} </span> </p>
+					<p>Total Runtime: <span className="info"> <span> {time[0]} hours</span> <span>{minutes} minutes</span> </span> </p>
 				</div>
 			</section>
 		</section>
