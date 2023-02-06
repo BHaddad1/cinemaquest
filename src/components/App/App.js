@@ -18,7 +18,6 @@ class App extends Component {
  }
 
  componentDidMount = () => {
-  
   getData("movies")
     .then(data => {
       this.setState({allMovies: data.movies, isLoading: false})
