@@ -51,7 +51,7 @@ class SingleMovie extends Component {
 		const hours = Math.floor(total / 60);
 		const minutes = total % 60;
 
-		return `${hours} hr ${minutes} m`
+		return `${hours.toFixed(0)} hr ${minutes.toFixed(0)} m`
 	}
 	 
 	
