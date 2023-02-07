@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ id, image, handleCardClick }) => {
+const Card = ({ id, image }) => {
   
   return (
     <div className="movie-card">
@@ -9,7 +9,6 @@ const Card = ({ id, image, handleCardClick }) => {
         className="movie-image"
         src={image}
         alt="movie poster"
-        onClick={() => handleCardClick(id)}
       />
     </div>
   );

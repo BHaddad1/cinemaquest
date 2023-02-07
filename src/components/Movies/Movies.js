@@ -1,17 +1,19 @@
 import React from "react";
 import './Movies.css';
 import Card from "../Card/Card";
+import { NavLink } from "react-router-dom";
 
-const Movies = ({ movies, handleCardClick }) => {
+const Movies = ({ movies }) => {
 	
 	const movieCards = movies.map((movie) => {
 		return (
-			<Card 
-				key={movie.id}
-				id={movie.id}
-				image={movie['poster_path']}
-				handleCardClick={handleCardClick}
-			/>
+			<NavLink to={`/${movie.id}`} key={movie.id}> 
+				<Card 
+					key={movie.id}
+					id={movie.id}
+					image={movie['poster_path']}
+				/>
+			</NavLink>
 		)
 	})
 
