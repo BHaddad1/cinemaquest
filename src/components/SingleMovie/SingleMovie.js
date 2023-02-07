@@ -19,7 +19,7 @@ class SingleMovie extends Component {
 				const tagline = data.movie.tagline;
 				const releaseDate = data.movie["release_date"].replaceAll("-", "/");
 				const averageRating = data.movie["average_rating"];
-				const genres = data.movie.genres.join(", ");
+				const genres = data.movie.genres.join(",  ");
 				const overview = data.movie.overview;
 				const budget = data.movie.budget.toLocaleString("en-US");
 				const revenue = data.movie.revenue.toLocaleString("en-US");
@@ -40,7 +40,6 @@ class SingleMovie extends Component {
 					backdrop_path: backDropImg,
 					poster_path: posterPath,
 				}
-				
 
 				this.setState({singleMovie: alteredSingleMovie, isLoading: false})
 			})
@@ -50,14 +49,12 @@ class SingleMovie extends Component {
 		let total = this.state.singleMovie.runtime; 
 		const hours = Math.floor(total / 60);
 		const minutes = total % 60;
-
-		return `${hours.toFixed(0)} hr ${minutes.toFixed(0)} m`
+		return `${hours.toFixed(0)} hrs ${minutes.toFixed(0)} min`
 	}
 	 
-	
 	render() {
 		return (
-		<section className="single-movie-container">
+			<section className="single-movie-container">
 				<NavLink to='/'>
 					<button className="back-button">Go Back Home</button>
 				</NavLink>
@@ -71,13 +68,13 @@ class SingleMovie extends Component {
 					</div> 
 					 <div className="movie-info">
 						<h2 className="movie-title">{this.state.singleMovie.title}</h2>
-						<h3>Tagline: <span className="info">{this.state.singleMovie.tagline}</span> </h3>
-						<h3>Released: <span className="info">{this.state.singleMovie["release_date"]} </span> </h3>
-						<h3>Average Rating: <span className="info">{this.state.singleMovie["average_rating"]}</span> </h3>
-						<h3>Genres: <span className="info">{this.state.singleMovie.genres} </span> </h3>
-						<p>Overview: <span className="info">{this.state.singleMovie.overview} </span> </p>
-						<p>Budget: <span className="info">${this.state.singleMovie.budget} </span> </p>
-						<p>Total Revenue: <span className="info"> ${this.state.singleMovie.revenue} </span> </p>
+						<h3>Tagline: <span className="info">{this.state.singleMovie.tagline}</span></h3>
+						<h3>Released: <span className="info">{this.state.singleMovie["release_date"]}</span></h3>
+						<h3>Average Rating: <span className="info">{this.state.singleMovie["average_rating"]}</span></h3>
+						<h3>Genres: <span className="info">{this.state.singleMovie.genres}</span></h3>
+						<p>Overview: <span className="info">{this.state.singleMovie.overview}</span></p>
+						<p>Budget: <span className="info">${this.state.singleMovie.budget}</span></p>
+						<p>Total Revenue: <span className="info"> ${this.state.singleMovie.revenue}</span></p>
 						<p>Total Runtime: <span className="info">{this.getDisplayTime()}</span></p>
 					</div> 
 				</section>
