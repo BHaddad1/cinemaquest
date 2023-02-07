@@ -7,7 +7,7 @@ const Movies = ({ movies }) => {
 	
 	const movieCards = movies.map((movie) => {
 		return (
-			<NavLink to={`/${movie.id}`} key={movie.id}> 
+			<NavLink to={`/movies/${movie.id}`} key={movie.id}> 
 				<Card 
 					key={movie.id}
 					id={movie.id}
