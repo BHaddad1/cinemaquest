@@ -30,7 +30,7 @@ class SingleMovie extends Component {
 				const alteredSingleMovie = {
 					title: title,
 					tagline: tagline,
-					release_Date: releaseDate,
+					release_date: releaseDate,
 					average_rating:averageRating,
 					genres:genres,
 					overview: overview,
@@ -47,10 +47,11 @@ class SingleMovie extends Component {
 	}
   
 	getDisplayTime() {
-		let total = this.state.singleMovie.runtime / 60;
-		let time = total.toString();
-		let minutes = time.substring(2, 4);
-		return `${time[0]} hours ${minutes} minutes`
+		let total = this.state.singleMovie.runtime; 
+		const hours = Math.floor(total / 60);
+		const minutes = total % 60;
+
+		return `${hours} hr ${minutes} m`
 	}
 	 
 	
@@ -77,7 +78,7 @@ class SingleMovie extends Component {
 						<p>Overview: <span className="info">{this.state.singleMovie.overview} </span> </p>
 						<p>Budget: <span className="info">${this.state.singleMovie.budget} </span> </p>
 						<p>Total Revenue: <span className="info"> ${this.state.singleMovie.revenue} </span> </p>
-						<p>Total Runtime: <span className="info"></span><span>{this.getDisplayTime()}</span></p>
+						<p>Total Runtime: <span className="info">{this.getDisplayTime()}</span></p>
 					</div> 
 				</section>
 			</section>
