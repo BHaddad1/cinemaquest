@@ -22,19 +22,7 @@ class App extends Component {
       this.setState({allMovies: data.movies, isLoading: false})
     })
     .catch(error => {this.setState({error: error.message})})
- }
-
-//  handleCardClick = id => {
-//   const foundMovie = this.state.allMovies.find(movie => movie.id === id);
-//   getData(`movies/${foundMovie.id}`)
-//     .then(data => this.setState({singleMovie: data.movie, singleMovieId: data.movie.id}))
-//     .catch(error => this.setState({error: error.message}))
-
-//  }
-
-//  handleBackButton = () => {
-//   this.setState({singleMovie: "", singleMovieId: 0})
-//  }
+  }
 
  render() {
   return (
@@ -50,7 +38,7 @@ class App extends Component {
     </div>
   )
  }
-  
+ 
 }
 
 
