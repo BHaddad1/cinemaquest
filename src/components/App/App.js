@@ -30,11 +30,10 @@ class App extends Component {
       <Form />
       {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
       {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
-      <Route exact path='/' render={() => <Movies movies={this.state.allMovies} />}></Route>
+      <Route exact path='/' render={() => <Movies movies={this.state.allMovies} />} />
       <Route path='/:movieId' render={({ match }) => {
         return <SingleMovie movieID={match.params.movieId}/>
-      }}
-     ></Route>
+      }} />
     </div>
   )
  }
