@@ -15,6 +15,7 @@ class SingleMovie extends Component {
 	componentDidMount() {
 		getData(`/movies/${this.props.movieID}`)
 			.then(data => {
+				console.log('here',data);
 				const title = data.movie.title;
 				const tagline = data.movie.tagline;
 				const releaseDate = data.movie["release_date"].replaceAll("-", "/");
@@ -40,7 +41,7 @@ class SingleMovie extends Component {
 					backdrop_path: backDropImg,
 					poster_path: posterPath,
 				}
-
+				
 				this.setState({singleMovie: alteredSingleMovie, isLoading: false})
 			})
 	}
