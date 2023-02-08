@@ -1,10 +1,16 @@
 import React from "react";
 import "./Error.css"
+import { Link } from "react-router-dom";
 
 const Error = () => {
 
   return (
-    <h2>Sorry, page does not exist.</h2>
+    <section className="error-container">
+      <h2>Sorry, page does not found.</h2>
+      <Link to="/">
+        <button className="error-button">Go Back Home</button>
+      </Link>
+    </section>
   )
 }
 
