@@ -1,3 +1,24 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
 h2 {
   color: white;
+  font-size: 40px;
+  margin-left: 33%;
+}
+
+.error-button {
+  background-color: #C70039;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  height: 5.5vh;
+  margin-left: 40%;
+  text-align: center;
+  width: 12vw;
 }
