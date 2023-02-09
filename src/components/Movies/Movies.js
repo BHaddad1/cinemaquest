@@ -2,6 +2,7 @@ import React from "react";
 import './Movies.css';
 import Card from "../Card/Card";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Movies = ({ movies }) => {
 	
@@ -26,3 +27,7 @@ const Movies = ({ movies }) => {
 }
 
 export default Movies;
+
+Movies.propTypes = {
+	movies: PropTypes.arrayOf(PropTypes.object).isRequired,
+}

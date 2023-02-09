@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './SingleMovie.css'; 
 import getData from "../../apiCalls/api";
 import { NavLink } from 'react-router-dom'; 
+import PropTypes from 'prop-types';
 
 class SingleMovie extends Component {
 	constructor(props) {
@@ -15,7 +16,6 @@ class SingleMovie extends Component {
 	componentDidMount() {
 		getData(`/movies/${this.props.movieID}`)
 			.then(data => {
-				console.log('here',data);
 				const title = data.movie.title;
 				const tagline = data.movie.tagline;
 				const releaseDate = data.movie["release_date"].replaceAll("-", "/");
@@ -59,7 +59,8 @@ class SingleMovie extends Component {
 				<NavLink to='/'>
 					<button className="back-button">Go Back Home</button>
 				</NavLink>
-				<section className="single-movie">
+				{this.state.isLoading && <h2 className="loading">Loading...</h2>}
+				{!this.state.isLoading && <section className="single-movie">
 					<div className="poster-container">
 						<img 
 							src={this.state.singleMovie["poster_path"]} 
@@ -78,7 +79,7 @@ class SingleMovie extends Component {
 						<p>Total Revenue: <span className="info"> ${this.state.singleMovie.revenue}</span></p>
 						<p>Total Runtime: <span className="info">{this.getDisplayTime()}</span></p>
 					</div> 
-				</section>
+				</section>}
 			</section>
 		)
 	}
@@ -86,4 +87,6 @@ class SingleMovie extends Component {
 
 export default SingleMovie;
 
-
+SingleMovie.propTypes = {
+	movieID: PropTypes.string.isRequired,
+}
