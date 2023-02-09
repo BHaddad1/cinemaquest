@@ -13,6 +13,9 @@ describe('CinemaQuest Error Page', () => {
     cy.get("button").should("be.visible");
    });
    it("Should have an error message", () => {
-    cy.get(".error").contains("Sorry, page found.")
-   })
-  })
+    cy.get("h2").contains("Sorry, page not found.");
+   });
+   it("Should display a back home button that takes you to the main page", () => {
+    cy.get("button").contains("Go Back Home").click();
+   });
+});
