@@ -36,7 +36,7 @@ class App extends Component {
         <Route exact path='/movies/:movieId' render={({ match }) => {
           return <SingleMovie movieID={match.params.movieId}/>
         }} />
-        <Route path="/*" render={() => <Error />} />
+        <Route path="/*" component={Error} />
       </Switch>
     </div>
   )
