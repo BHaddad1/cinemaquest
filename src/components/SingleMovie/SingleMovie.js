@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './SingleMovie.css'; 
 import getData from "../../apiCalls/api";
-import { NavLink } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import PropTypes from 'prop-types';
 
 class SingleMovie extends Component {
@@ -9,7 +9,7 @@ class SingleMovie extends Component {
 		super(props);
 		this.state = {
 			isLoading: true,
-			singleMovie:{},
+			singleMovie: {},
 		}
 	}
 
@@ -32,16 +32,15 @@ class SingleMovie extends Component {
 					title: title,
 					tagline: tagline,
 					release_date: releaseDate,
-					average_rating:averageRating,
-					genres:genres,
+					average_rating: averageRating,
+					genres: genres,
 					overview: overview,
-					budget:budget,
+					budget: budget,
 					revenue: revenue,
 					runtime: runtime,
 					backdrop_path: backDropImg,
 					poster_path: posterPath,
 				}
-				
 				this.setState({singleMovie: alteredSingleMovie, isLoading: false})
 			})
 	}
@@ -56,9 +55,9 @@ class SingleMovie extends Component {
 	render() {
 		return (
 			<section className="single-movie-container">
-				<NavLink to='/'>
+				<Link to='/'>
 					<button className="back-button">Go Back Home</button>
-				</NavLink>
+				</Link>
 				{this.state.isLoading && <h2 className="loading">Loading...</h2>}
 				{!this.state.isLoading && <section className="single-movie">
 					<div className="poster-container">
@@ -81,9 +80,9 @@ class SingleMovie extends Component {
 					</div> 
 				</section>}
 			</section>
-		)
-	}
-}
+		);
+	};
+};
 
 export default SingleMovie;
 
