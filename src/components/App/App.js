@@ -18,30 +18,23 @@ class App extends Component {
     isLoading: true,
     filteredMovies: [],
     searchedMovie: "",
+    }
   }
- }
 
  componentDidMount = () => {
   getData("movies")
-    .then(data => {
-      this.setState({allMovies: data.movies, isLoading: false})
-    })
+    .then(data => {this.setState({allMovies: data.movies, isLoading: false})})
     .catch(error => {this.setState({error: error.message})})
   }
 
   grabInput = (title) => {
-    const lowerCasedInput = title.toLowerCase()
-    const alteredMovieTitles = this.state.allMovies.map((movie) => {
-     movie.title = movie.title.toLowerCase();
-      return movie;
-    })
-    const filteredMovies = alteredMovieTitles.filter( movie => 
-      movie.title.includes(lowerCasedInput))
+    const filteredMovies = this.state.allMovies.filter( movie => 
+      movie.title.toLowerCase().includes(title.toLowerCase()))
     this.setState({filteredMovies: filteredMovies, searchedMovie: title})
   }
 
   clearFilteredMovies = () => {
-    this.setState({filteredMovies:[], searchedMovie: ""})
+    this.setState({filteredMovies: [], searchedMovie: ""})
   }
 
  render() {
@@ -66,8 +59,6 @@ class App extends Component {
     </div>
   )
  }
- 
 }
-
 
 export default App;
