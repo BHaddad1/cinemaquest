@@ -1,5 +1,5 @@
 ## CinemaQuest/ Rancid Tomatillos / 45 hours group project 
-Project requirements : https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html
+![Project requirements Rancid Tomatillos]( https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 The learning goals of this project are...
 - To gain competency with React Fundamentals
 - To learn and test React components and their lifeCycle methods
@@ -9,7 +9,9 @@ The learning goals of this project are...
 It's always difficult to pick out a movie for movie night. CinemaQuest is an application with a user-friendly interface that offers a solution. A user has the ability to see a page with forty movie poster options available. If a movie becomes of interest to our user, the person can then click on the associated movie poster and be routed to a single movie view giving the user details about that specified movie. To further advance the user experience CinemaQuest implements a search bar to streamline the movie vetting process.  
  
 ## Screenshots / deployment link if applicable
-
+![User can see a display](./src/assets/allMovies.gif)
+![User can see a single movie](./src/assets/singleMovie.gif)
+![User can use a search bar](./src/assets/searchBar.gif)
 ## Tech/framework used
 - React 
 - Cypress (testing)
@@ -39,8 +41,9 @@ Visit the project repository CinemaQuest
 - while keeping terminal running, open up browser and see the project deployed 
 
 ## API Reference
-https://rancid-tomatillos.herokuapp.com/api/v2//movies : all movies 
-https://rancid-tomatillos.herokuapp.com/api/v2//movies/movies/:movie_id : single movie we use the movie_id dynamically to achieve a dynamic fetch. 
+![all movies Data]('https://rancid-tomatillos.herokuapp.com/api/v2//movies')
+![single Movie Data]('https://rancid-tomatillos.herokuapp.com/api/v2//movies/movies/:movie_id')
+- single movie Data was used dynamically to get respective film information 
 
 
 ## Tests
@@ -54,15 +57,16 @@ https://rancid-tomatillos.herokuapp.com/api/v2//movies/movies/:movie_id : single
  Blanche H : 4 months 1 week
  
  gitHubs: 
- Blanche Haddad (they/them) https://github.com/BHaddad1
- Andrew Cerveny (he/him) https://github.com/AndrewCerveny
+ ![Blanche Haddad (they/them)]('https://github.com/BHaddad1')
+ ![Andrew Cerveny (he/him)]('https://github.com/AndrewCerveny')
 
 ## Future extension
 - Adding a trailer video for each movie card 
 - Adding more movies to better the experience
 - Being able to separate the movies by genres 
 
-## challenges 
+## challenges & Wins
+Challenges:
 - First time exploring a project using React
 - Implementing Router instead of the previous conditional rendering
 - Having a error page shown if the user went down a bad path
@@ -71,4 +75,9 @@ https://rancid-tomatillos.herokuapp.com/api/v2//movies/movies/:movie_id : single
 - Balancing time commitment across two different timeZones: Eastern and Mountain
 - Using methods to track and update state across components. 
 
-
+Wins: 
+- Completed project in 1 week
+- Implemented search functionality to filter movies by titles
+- Implemented Router
+- Implemented many error messages for the user to easily understand
+- Implemented a new testing software 
