@@ -6,7 +6,7 @@ import Movies from '../Movies/Movies';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import getData from '../../apiCalls/api';
 import Error from '../Error/Error';
-import icon from "../../images/popcorn.png";
+import icon from "../../assets/popcorn.png";
 
 
 class App extends Component {
