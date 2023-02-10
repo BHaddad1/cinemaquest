@@ -45,18 +45,17 @@ class App extends Component {
 
   clearFilteredMovies = () => {
     this.setState({filteredMovies:[]})
-
   }
 
- 
-// add route to form
  render() {
   const movieData = this.state.filteredMovies.length ? this.state.filteredMovies : this.state.allMovies
   return (
     <div>
-      <img className="logo" src={icon} alt="Happy popcorn bucket" />
-      <h1 className="title">CinemaQuest</h1>
-      <Form grabInput={this.grabInput} clearFilteredMovies={this.clearFilteredMovies}/>
+      <div className="header-container">
+        <img className="logo" src={icon} alt="Happy popcorn bucket" />
+        <h1 className="title">CinemaQuest</h1>
+      </div>
+      <Route exact path="/" render={() => <Form grabInput={this.grabInput} clearFilteredMovies={this.clearFilteredMovies}/>} />
       {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
       {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
       <Switch>
