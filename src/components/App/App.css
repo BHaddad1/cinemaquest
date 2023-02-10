@@ -33,6 +33,7 @@
 
 .logo {
   margin-left: 13%;
+  margin-top: 2%;
 }
 
 .title {
@@ -41,4 +42,11 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 6%;
+}
+
+.header-container {
+  display: flex;
+  height: 25vh;
+  justify-content: flex-start;
+  width: 100vw;
 }
