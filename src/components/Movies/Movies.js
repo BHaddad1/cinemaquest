@@ -1,29 +1,28 @@
 import React from "react";
 import './Movies.css';
 import Card from "../Card/Card";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const Movies = ({ movies }) => {
 	
 	const movieCards = movies.map((movie) => {
 		return (
-			<NavLink to={`/movies/${movie.id}`} key={movie.id}> 
+			<Link to={`/movies/${movie.id}`} key={movie.id}> 
 				<Card 
 					key={movie.id}
 					id={movie.id}
 					image={movie['poster_path']}
 				/>
-			</NavLink>
+			</Link>
 		)
 	})
 	
-    return (
-       <section className='movies-container'> 
-				{movieCards}
-       </section> 
-    )
-
+  return (
+    <section className='movies-container'> 
+			{movieCards}
+    </section> 
+  )
 }
 
 export default Movies;
