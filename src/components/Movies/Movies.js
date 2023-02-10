@@ -17,7 +17,7 @@ const Movies = ({ movies }) => {
 			</NavLink>
 		)
 	})
-
+	
     return (
        <section className='movies-container'> 
 				{movieCards}

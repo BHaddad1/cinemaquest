@@ -1,7 +1,6 @@
-.nav {
-  display: flex;
-  flex-direction: row;
-  height: 30vh;
+.search-bar {
+  height: 29vh;
+  margin-left: 6%;
 }
 
 .search-field {
@@ -32,6 +31,7 @@
   text-align: center;
   width: 6vw;
 }
+
 .search-wrapper {
   align-items: center;
   display: flex;
