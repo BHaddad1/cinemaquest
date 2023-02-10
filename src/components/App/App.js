@@ -30,16 +30,13 @@ class App extends Component {
 
   grabInput = (title) => {
     const lowerCasedInput = title.toLowerCase()
-    const filteredMovies = this.state.allMovies.reduce((acc , movie) => {
-      let lowerCasedTitle = movie.title.toLowerCase()
-      if(lowerCasedTitle.includes(lowerCasedInput)){
-         acc = [...acc, movie]
-      }else {
-       return acc
-      }
-    return acc
-    },[])
-
+    const alteredMovieTitles = this.state.allMovies.map((movie) => {
+     movie.title = movie.title.toLowerCase()
+      return movie
+    })
+    
+    const filteredMovies = alteredMovieTitles.filter( movie => 
+      movie.title.includes(lowerCasedInput))
     this.setState({filteredMovies: filteredMovies})
   }
 
