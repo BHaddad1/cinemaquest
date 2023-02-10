@@ -25,7 +25,7 @@ class Form extends Component {
 
   render() {
     return (
-      <header className="nav">
+      <section className="search-bar">
         <div className="search-wrapper"> 
           <input
             type="text"
@@ -39,7 +39,7 @@ class Form extends Component {
             Clear
           </button>
         </div>
-      </header>
+      </section>
     );
   }
 }
