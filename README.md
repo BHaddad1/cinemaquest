@@ -67,6 +67,7 @@ Visit the project repository CinemaQuest
 
 ## challenges & Wins
 Challenges:
+
 - First time exploring a project using React
 - Implementing Router instead of the previous conditional rendering
 - Having a error page shown if the user went down a bad path
@@ -76,6 +77,7 @@ Challenges:
 - Using methods to track and update state across components. 
 
 Wins: 
+
 - Completed project in 1 week
 - Implemented search functionality to filter movies by titles
 - Implemented Router
