@@ -13,10 +13,9 @@ class Form extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-    
-    const title = this.state.title;
-    this.props.grabInput(title)
-  };
+    this.props.grabInput(this.state.title)
+  }
+
  clearInputs = (e) => {
   e.preventDefault();
   this.setState({title: ''})
@@ -41,8 +40,8 @@ class Form extends Component {
         </div>
       </section>
     );
-  }
-}
+  };
+};
 
 export default Form;
 
