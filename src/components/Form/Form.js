@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Form.css";
-import icon from "../../images/popcorn.png";
+
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: "",
     };
@@ -13,17 +13,19 @@ class Form extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
+    
+    const title = this.state.title;
+    this.props.grabInput(title)
   };
-
-  handleClick = () => {
-    console.log("Return and fix");
-  };
+ clearInputs = (e) => {
+  e.preventDefault();
+  this.setState({title: ''})
+  this.props.clearFilteredMovies()
+ }
 
   render() {
     return (
       <header className="nav">
-        <img className="logo" src={icon} alt="Happy popcorn bucket" />
-        <h1 className="title">CinemaQuest</h1>
         <div className="search-wrapper"> 
           <input
             type="text"
@@ -33,8 +35,8 @@ class Form extends Component {
             onChange={(event) => this.handleChange(event)}
             className="search-field"
            />
-          <button className="button" onClick={this.handleClick}>
-            Search
+          <button className="button" onClick={(e) =>this.clearInputs(e)}>
+            Clear
           </button>
         </div>
       </header>
