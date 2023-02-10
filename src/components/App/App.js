@@ -17,6 +17,7 @@ class App extends Component {
     error: "",
     isLoading: true,
     filteredMovies: [],
+    searchedMovie: "",
   }
  }
 
@@ -40,15 +41,15 @@ class App extends Component {
     return acc
     },[])
 
-    this.setState({filteredMovies: filteredMovies})
+    this.setState({filteredMovies: filteredMovies, searchedMovie: title})
   }
 
   clearFilteredMovies = () => {
-    this.setState({filteredMovies:[]})
+    this.setState({filteredMovies:[], searchedMovie: ""})
   }
 
  render() {
-  const movieData = this.state.filteredMovies.length ? this.state.filteredMovies : this.state.allMovies
+  const movieData = this.state.searchedMovie ? this.state.filteredMovies : this.state.allMovies
   return (
     <div>
       <div className="header-container">
@@ -58,6 +59,7 @@ class App extends Component {
       <Route exact path="/" render={() => <Form grabInput={this.grabInput} clearFilteredMovies={this.clearFilteredMovies}/>} />
       {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
       {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
+      {this.state.searchedMovie && !this.state.filteredMovies.length && <h2 className='no-movies'>Sorry, no movies found. Please try again!</h2>}
       <Switch>
         <Route exact path='/' render={() => <Movies movies={movieData} />} />
         <Route exact path='/movies/:movieId' render={({ match }) => {

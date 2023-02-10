@@ -26,7 +26,7 @@
   margin-left: 43%;
 }
 
-.error {
+.error, .no-movies {
   font-size: 40px;
   margin-left: 24%;
 }
