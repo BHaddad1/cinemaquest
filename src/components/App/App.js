@@ -42,6 +42,14 @@ class App extends Component {
     },[])
 
     this.setState({filteredMovies: filteredMovies, searchedMovie: title})
+    const alteredMovieTitles = this.state.allMovies.map((movie) => {
+     movie.title = movie.title.toLowerCase()
+      return movie
+    })
+    
+    const filteredMovies = alteredMovieTitles.filter( movie => 
+      movie.title.includes(lowerCasedInput))
+    this.setState({filteredMovies: filteredMovies})
   }
 
   clearFilteredMovies = () => {
