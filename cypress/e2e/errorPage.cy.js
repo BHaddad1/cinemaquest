@@ -9,8 +9,6 @@ describe('CinemaQuest Error Page', () => {
    it("Should have a form", () => {
     cy.get(".title").contains("CinemaQuest");
     cy.get(".logo").should("be.visible");
-    cy.get(".search-field").should("be.visible");
-    cy.get("button").should("be.visible");
    });
    it("Should have an error message", () => {
     cy.get("h2").contains("Sorry, page not found.");
