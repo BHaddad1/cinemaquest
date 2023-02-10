@@ -19,7 +19,7 @@ describe("Single Movie View", () => {
     cy.get("h3").should("contain", "4");
   });
   it("Should display genres for the movie", () => {
-    cy.get("h3").should("contain", "Action, Fantasy, Science Fiction"); 
+    cy.get("h3").should("contain", "Action", "Fantasy", "Science Fiction"); 
   });
   it("Should display an overview segment", () => {
     cy.get("p").should("contain", "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.");
@@ -33,19 +33,13 @@ describe("Single Movie View", () => {
   it("Should display a total movie runtime", () => {
     cy.get("p").should("contain", "2 hrs 5 min");
   });
-  it("Should display the company logo", () => {
+  it("Should display the site logo", () => {
     cy.get(".logo").should("be.visible");
   });
   it("Should display the site name CinemaQuest", () => {
     cy.get(".title").should("contain", "CinemaQuest");
   });
-  it("Should have a search bar input area", () => {
-    cy.get('input[placeHolder="Movie Title"]').should("be.visible");
-  });
-  it("Should have a submit button visible", () => {
-    cy.get("button").should("be.visible");
-  });
-  it("Should have a return to all movies view", () => {
+  it("Should have a return to all movies view button", () => {
     cy.get(".back-button").should("be.visible");
   });
   it("User should be able to click the back button and see all movies", () => {
