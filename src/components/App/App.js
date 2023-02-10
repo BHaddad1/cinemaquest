@@ -28,6 +28,8 @@ class App extends Component {
  render() {
   return (
     <div>
+      <img className="logo" src={icon} alt="Happy popcorn bucket" />
+      <h1 className="title">CinemaQuest</h1>
       <Form />
       {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
       {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
