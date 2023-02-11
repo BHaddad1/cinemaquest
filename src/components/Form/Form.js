@@ -11,9 +11,7 @@ class Form extends Component {
   }
 
   handleChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-    this.props.grabInput(this.state.title)
+    this.setState({ [event.target.name]: event.target.value }, () => this.props.grabInput(this.state.title));
   }
 
  clearInputs = (e) => {
