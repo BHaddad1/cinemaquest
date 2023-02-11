@@ -27,7 +27,7 @@ class App extends Component {
     .catch(error => {this.setState({error: error.message})})
   }
 
-  filterMovies = (title) => {
+  grabInput = (title) => {
     const filteredMovies = this.state.allMovies.filter( movie => 
       movie.title.toLowerCase().includes(title.toLowerCase()))
     this.setState({filteredMovies: filteredMovies, searchedMovie: title})
