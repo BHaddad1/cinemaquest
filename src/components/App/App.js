@@ -28,8 +28,7 @@ class App extends Component {
   }
 
   filterMovies = (title) => {
-    const filteredMovies = this.state.allMovies.filter(movie => 
-      movie.title.toLowerCase().includes(title.toLowerCase()))
+    const filteredMovies = this.state.allMovies.filter(movie =>  movie.title.toLowerCase().includes(title.toLowerCase()))
     this.setState({filteredMovies: filteredMovies, searchedMovie: title})
   }
 
@@ -45,7 +44,7 @@ class App extends Component {
         <img className="logo" src={icon} alt="Happy popcorn bucket" />
         <h1 className="title">CinemaQuest</h1>
       </div>
-      <Route exact path="/" render={() => <Form grabInput={this.grabInput} clearFilteredMovies={this.clearFilteredMovies}/>} />
+      <Route exact path="/" render={() => <Form filterMovies={this.filterMovies} clearFilteredMovies={this.clearFilteredMovies}/>} />
       {this.state.isLoading && !this.state.error && <h2 className="loading">Loading...</h2>}
       {this.state.error && <h2 className="error">Sorry, there was an error. Please come back later.</h2>}
       {this.state.searchedMovie && !this.state.filteredMovies.length && <h2 className='no-movies'>Sorry, no movies found. Please try again!</h2>}

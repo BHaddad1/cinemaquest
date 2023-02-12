@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+## CinemaQuest/ Rancid Tomatillos / 45 hours group project 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Rancid Tomatillos project ](https://link-url-here.org)https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
-## Available Scripts
+The learning goals of this project are...
+- To gain competency with React Fundamentals
+- To learn and test React components and their lifeCycle methods
+- To create a multi-page experience using Router 
 
-In the project directory, you can run:
+## Motivation
 
-### `npm start`
+It's always difficult to pick out a movie for movie night. CinemaQuest is an application with a user-friendly interface that offers a solution. A user has the ability to see a page with forty movie poster options available. If a movie becomes of interest to our user, the person can then click on the associated movie poster and be routed to a single movie view giving the user details about that specified movie. To further advance the user experience CinemaQuest implements a search bar to streamline the movie vetting process.  
+ 
+## Screenshots / deployment link if applicable
+![User can see a display](./src/assets/allMovies.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+see all movies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![User can see a single movie](./src/assets/singleMovie.gif)
 
-### `npm test`
+see a single movie
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![User can use a search bar](./src/assets/searchBar.gif)
 
-### `npm run build`
+use a search bar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech/framework used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React 
+- Cypress (testing)
+- Router 
+- CSS, HTML, JavaScript
+- ProtoType (testing params)
+- JSX
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Our project provides...
+- A user can enter the site and see a display of movie posters with titles
+- A user can click on a movie poster and be shown a single movie display
+- In the single movie display vital movie information will be given. Such as: OverView, title, runtime, and ratings 
+- A user has the option to click back out of the single movie and see all the movie options again 
+- A user has the ability to streamline their search with a search bar that will show movies that includes certain words in realtime. 
+- If no movies could be found specified from user than the user will be notified of the limitation
+- If a user tried to access a page outside of the project lines an error message will be displayed guiding the user back to the heart of the application
+- Upon load a user will be notified that the page is building. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Visit the project repository CinemaQuest 
+- Copy / clone repo
+- Go into terminal -- mkdir folder- cd folder 
+- Run git clone [....]
+- cd into project 
+- run NPM start .. should see message that project is running on local host
+- While keeping terminal running, open up browser and see the project deployed 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## API Reference
 
-## Learn More
+all movies Data: https://rancid-tomatillos.herokuapp.com/api/v2//movies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+single Movie Data: https://rancid-tomatillos.herokuapp.com/api/v2//movies/movies/:movie_id
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Single movie Data was used dynamically to get respective film information 
 
-### Code Splitting
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Run npm i -D cypress to make sure dependency is added
+- Open cypress with npx cypress open 
+- Ex. A user should be able to visit the page and see a display of 40 movies-- should be green showing passing test. 
 
-### Analyzing the Bundle Size
+##   Experience, time frame, & Project type 
+ 
+ CinemaQuest is a paired Project. We have been in Turing studying frontend for: 
+ 
+ Andrew  C : 6 months 1 week
+ 
+ Blanche H : 4 months 1 week
+ 
+ Timeframe for this project was 12 days.
+ 
+## GitHubs: 
+ 
+ [Blanche Haddad (they/them)](https://github.com/BHaddad1)
+ 
+ [Andrew Cerveny (he/him)](https://github.com/AndrewCerveny)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future iterations
 
-### Making a Progressive Web App
+- Adding a trailer video for each movie card 
+- Adding more movies to better the experience
+- Being able to separate the movies by genres 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Challenges & Wins
 
-### Advanced Configuration
+Challenges:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Having a error page shown if the user went down a bad path
+- Implementing a search bar; not just filtering the movies but also showing the user a message that their movie was not on file
+- Implementing Cypress testing as new software
+- Balancing time commitment across two different timeZones: Eastern and Mountain
 
-### Deployment
+Wins: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Completed project in 1 week
+- Implemented search functionality to filter movies by titles
+- Implemented Router
+- Implemented many error messages for the user to easily understand
+- Implemented a new testing software 
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
