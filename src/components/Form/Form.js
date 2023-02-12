@@ -34,7 +34,7 @@ class Form extends Component {
             onChange={(event) => this.handleChange(event)}
             className="search-field"
            />
-          <button className="button" onClick={(e) =>this.clearInputs(e)}>
+          <button className="button" onClick={(e) => this.clearInputs(e)}>
             Clear
           </button>
         </div>
