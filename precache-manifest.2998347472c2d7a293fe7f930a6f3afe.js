@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "896388662152e16b1bf8",
+    "revision": "4350f2de1f1a0c13cd60",
     "url": "/cinemaquest/static/css/main.ae34b137.chunk.css"
   },
   {
-    "revision": "896388662152e16b1bf8",
-    "url": "/cinemaquest/static/js/main.89638866.chunk.js"
+    "revision": "4350f2de1f1a0c13cd60",
+    "url": "/cinemaquest/static/js/main.4350f2de.chunk.js"
   },
   {
     "revision": "071f6974c376b039043f",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/cinemaquest/static/media/popcorn.77544ce0.png"
   },
   {
-    "revision": "817fe05adc9c8c983f4382def60f8691",
+    "revision": "0f4b7bc53e8ffafb5ec8c18f4e04b4fb",
     "url": "/cinemaquest/index.html"
   }
 ];
